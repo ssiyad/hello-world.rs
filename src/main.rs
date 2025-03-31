@@ -1,4 +1,5 @@
 use std::env;
+use std::process;
 
 fn main() {
     let args = env::args();
@@ -19,6 +20,6 @@ fn main() {
         "ru" => println!("Привет, мир!"),
         "tr" => println!("Merhaba, dünya!"),
         "zh" => println!("你好，世界！"),
-        _ => println!("Language not supported."),
+        _ => process::exit(1),
     }
 }
