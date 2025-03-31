@@ -40,7 +40,7 @@ fn main() {
     }
 
     // Show list of available languages if "--langs" is passed.
-    if lang.eq("--langs") {
+    if lang == "--langs" {
         println!("Available languages:");
         for (_, lang) in langs {
             println!("{}: {}", lang.code, lang.name);
