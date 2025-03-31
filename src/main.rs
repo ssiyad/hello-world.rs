@@ -9,8 +9,8 @@ struct Lang {
 }
 
 fn main() {
-    let args = env::args();
-    let lang = args.skip(1).next().unwrap_or_else(|| "en".to_string());
+    let mut args = env::args();
+    let lang = args.nth(1).unwrap_or_else(|| "en".to_string());
     let mut langs = HashMap::new();
 
     for lang in [
